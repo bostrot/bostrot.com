@@ -1,0 +1,50 @@
+name: Build & Deploy bostrot.com
+
+# This repo is a deploy shim: all source lives in bostrot/portfolio-v2
+# (templates/bostrot.html + shared styles, fonts and data). This workflow
+# checks that repo out, builds it, and publishes dist-bostrot/ here so
+# bostrot.com gets its own GitHub Pages site and custom domain.
+
+on:
+  schedule:
+    # Daily at 05:47 UTC — half an hour after portfolio-v2's data refresh.
+    - cron: "47 5 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: bostrot/portfolio-v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build site
+        run: node scripts/build.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-bostrot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sennit Privacy Policy</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1d1b20;--dim:#49454f;--link:#4f46e5}
+@media (prefers-color-scheme:dark){:root{--bg:#141218;--fg:#e6e0e9;--dim:#cac4d0;--link:#a5b4fc}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:2.5rem 1rem 4rem}
+h1{font-size:1.8rem;margin:0 0 1rem} h2{font-size:1.15rem;margin:2rem 0 .5rem}
+p,li{color:var(--dim)} strong{color:var(--fg)} a{color:var(--link)}
+code{font-size:.9em} ul{padding-left:1.3rem}
+</style>
+</head>
+<body>
+<main>
+<h1>Sennit Privacy Policy</h1>
+<p><em>Effective: 26 November 2026</em></p>
+<p>Sennit is a messenger for Matrix and the networks bridged into it. The app has no crash reporting, no advertising and no tracking, and sends anonymous usage statistics <a href="#analytics">only if you opt in</a>. What the developer can see depends on <strong>which server you use</strong>:</p>
+<ul>
+  <li><strong>Your own Matrix server, or one run by someone else:</strong> the developer receives nothing (apart from anonymous usage statistics, if you opt in). Everything goes to the server you chose, and its operator's policy applies.</li>
+  <li><strong>Our public server, matrix.aachen.dev</strong> (the default on the sign-in screen), and the bridges we run next to it: we operate that server, so the data in the next section is stored on our infrastructure.</li>
+</ul>
+<h2>Controller</h2>
+<p>Bostrot Inh. Eric Trenkel, Kölner Str. 71, 50259 Pulheim, Germany — <a href="mailto:eric@bostrot.com">eric@bostrot.com</a> (see the <a href="/imprint.html">imprint</a>).</p>
+<h2>Our public server (matrix.aachen.dev) and its bridges</h2>
+<p>Signing up asks only for a username and a password; no email address or phone number. If you create an account on matrix.aachen.dev, or connect WhatsApp, Signal, Telegram, Google Messages, Discord, Instagram or Messenger through our bridges, we store and process:</p>
+<ul>
+  <li><strong>Your account:</strong> your Matrix ID, display name, profile picture and a hash of your password, and for each signed-in device its name and last-seen IP address.</li>
+  <li><strong>Your conversations:</strong> messages, photos, videos, voice messages, files, reactions and locations you share. In end-to-end encrypted Matrix rooms the server stores only encrypted content it cannot read. <strong>Bridged chats are not end-to-end encrypted on our side.</strong> To relay a message between Matrix and the other network, the bridge has to read it, so we technically have access to the content of bridged chats.</li>
+  <li><strong>Your connected networks:</strong> the phone number or account you connected, the login session the bridge keeps for it (for Instagram and Messenger, the session cookies from the sign-in page you completed in the app), and the contacts and group members of that network, as the bridge imports them.</li>
+  <li><strong>Link previews:</strong> the server fetches links to build previews (by default in chats that are not end-to-end encrypted; in encrypted chats only if you turn it on in Settings → Link previews; you can switch previews off entirely), so it learns which links are previewed. The linked site sees the server, not your device.</li>
+  <li><strong>Technical logs:</strong> IP addresses and request logs of the server and its proxies. They are used only to run and secure the service, are rotated by size and overwritten automatically, typically within days to a few weeks.</li>
+</ul>
+<p>We keep your account and messages until you delete them or your account. We use this data <strong>only to provide the service</strong>: delivering your messages, keeping your history and running the bridges (Art. 6(1)(b) GDPR), and keeping the service secure and backed up (Art. 6(1)(f) GDPR). We do not sell it, do not use it for advertising or profiling, and do not share it with anyone except:</p>
+<ul>
+  <li>the <strong>networks you connect</strong>, which receive the messages you send to them, as they would from their own apps (their privacy policies apply to what they hold);</li>
+  <li>our <strong>service providers</strong>, who process data only on our behalf: <strong>Cloudflare, Inc.</strong>, through whose network all traffic to the server passes (reverse proxy and DDoS protection; it decrypts connections in transit and keeps its own connection logs), and <strong>Hetzner Online GmbH</strong>, which stores our encrypted backups;</li>
+  <li><strong>authorities</strong>, where we are legally required to.</li>
+</ul>
+<p><strong>Where it is hosted.</strong> The server runs on our own hardware in Germany and is reached through Cloudflare. Backups are encrypted on our side before upload (AES-256) and stored with Hetzner in Falkenstein, Germany. A backup can be up to about 12 months old before it is deleted, so deleted data can remain in backups until then.</p>
+<h2 id="delete-account">Deleting your account</h2>
+<p>Email <strong><a href="mailto:eric@bostrot.com?subject=Delete%20my%20Sennit%20account">eric@bostrot.com</a></strong> with your Matrix ID (for example <code>@name:matrix.aachen.dev</code>); we may ask you to confirm the request from inside your account. We then deactivate the account, erase its profile and messages from our server and log out its bridges, usually within 30 days. You can also delete the account yourself in Sennit 1.0.21 or later under Settings → Account → Delete account, which logs out its bridges, deactivates it and asks the server to erase it. Messages already delivered to other people, or to a connected network, stay with them. See also <a href="delete-account.html">Delete your Sennit account</a>.</p>
+<h2 id="analytics">Anonymous usage statistics (opt-in)</h2>
+<p>Sennit uses <strong>Plausible Analytics</strong>, a privacy-friendly, cookie-free analytics tool, <strong>only if you opt in</strong>. It is off until you say yes: the app asks once, after sign-in, and sends nothing before you answer.</p>
+<ul>
+  <li><strong>What is sent:</strong> the screens you open, named after the screen (for example <code>/settings</code> or <code>/chat</code>, never which chat), and a few feature events: a messenger connected (which network), an AI feature used (translate, quick message or transcription), device sync switched on, and Sennit Pro bought (store or licence key). Every event carries the app version, the platform and the screen width. From the request, Plausible derives the country and the browser or operating system; it does not store the IP address.</li>
+  <li><strong>What is never sent:</strong> personal data, message content, contacts, names, Matrix IDs, room IDs or anything you type. There are no cookies and no identifier that follows you across apps, websites or devices.</li>
+  <li><strong>Where it goes:</strong> Plausible Community Edition, self-hosted by us at analytics.bostrot.com on our own server in Germany and reached through Cloudflare (see above). The statistics are not shared with anyone and not used for advertising.</li>
+  <li><strong>Legal basis:</strong> your consent, Art. 6(1)(a) GDPR.</li>
+  <li><strong>Withdrawing:</strong> switch off Settings → Privacy &amp; security → <em>Share anonymous usage statistics</em> at any time; it takes effect immediately and does not affect what was sent before. If you use device sync, the setting applies to your other devices too. In Sennit Web, a browser set to send “Do Not Track” or Global Privacy Control sends nothing, whatever the setting says.</li>
+  <li><strong>Retention:</strong> Plausible counts unique users with a hash that changes every day; the daily salt is deleted after 24 hours, so a visit cannot be linked to an earlier day. What remains are aggregated statistics without any identifier, which we keep for as long as they are useful to us.</li>
+</ul>
+<h2>Sennit Pro</h2>
+<p>Sennit Pro is an optional one-time purchase.</p>
+<ul>
+  <li><strong>From the App Store or Google Play:</strong> Apple or Google handle the payment and tell the app whether you own Pro. The developer receives the store's usual sales reports, which contain no messages, contacts or other content from the app.</li>
+  <li><strong>Builds downloaded from the project's release page:</strong> you buy a licence key through Stripe. Stripe processes the payment, and the developer keeps your email address and licence key to deliver and support the licence. When you enter the key, the app sends <strong>the key and nothing else</strong> — no device id, account or app data — to the developer's licence service to check that it is valid.</li>
+</ul>
+<h2>Where your data goes</h2>
+<p>Sennit talks to:</p>
+<ul>
+  <li><strong>The Matrix homeserver you sign in to:</strong> ours (above) or one you chose. Messages, media, contacts and encryption keys sync with it.</li>
+  <li><strong>The bridges on that server.</strong> On ours, they run as described above. If you run your own, they run under your control. The networks they connect to see what any client on them sees.</li>
+  <li><strong>A push gateway, only if you set one.</strong> None is set by default, and we do not run one. Pushes carry only event and room IDs, never message text.</li>
+  <li><strong>Optional AI endpoints.</strong> Voice transcription, semantic search embeddings, reply suggestions, quick messages and auto-reply only run if you configure an endpoint for them. A quick message sends the last twelve messages of the chat you picked it in, only when you pick it, and its draft lands in the composer — nothing is sent to the chat until you do. On-device models never send audio or text anywhere. If you point Sennit at a remote endpoint, the content you asked it to process is sent to that endpoint — which, again, you chose and control.</li>
+</ul>
+<h2>Auto-reply</h2>
+<p>Sennit can answer messages for you, using the same model endpoint you configured above and no other. Nothing about this feature reaches the developer, and there is no service in the middle.</p>
+<ul>
+  <li>It is <strong>off until you write a rule and switch that rule on</strong>. A rule you have saved but not enabled sends nothing.</li>
+  <li>When a rule fires, Sennit sends your prompt and <strong>the last few messages of that conversation</strong> to your endpoint, and sends what comes back as a message from you. Nothing else about the conversation is included.</li>
+  <li>The reply is marked as machine-written, so you and anyone using a client that understands the marker can tell it apart from something you typed.</li>
+  <li><strong>The conversation stays unread.</strong> Sennit does not send a read receipt for an auto-reply and does not clear the badge — on this device or on your others. The other side is told a message arrived, not that theirs was read.</li>
+  <li>Sennit never auto-replies to a message request from someone you have not answered. Replying would confirm your handle is live and being read, and that is a decision only you make.</li>
+  <li>No conversation receives more than three automatic replies an hour, whatever your rules say. This limit is not adjustable.</li>
+</ul>
+<h2>SMS (Android only)</h2>
+<p>On Android, Sennit can be your default messaging app. This is optional and off until you choose Sennit in Android's own "Default SMS app" dialog; until then Sennit cannot read or send text messages at all.</p>
+<ul>
+  <li><strong>What it reads.</strong> While it holds that role, Sennit reads, receives and sends the SMS and MMS on your phone so they appear in the same inbox as your other conversations.</li>
+  <li><strong>Where they go.</strong> Nowhere new. Text messages stay in Android's message store on your device and travel over your carrier, as they do with any SMS app. Sennit does not upload them to your Matrix homeserver, to a bridge, or to the developer.</li>
+  <li><strong>On-device use.</strong> Their text is added to the local search index, and a number that also has a chat on another network can be shown as one conversation. Both happen on the device.</li>
+  <li><strong>Features you switch on.</strong> If you configure a remote AI endpoint and use it on a text conversation — an auto-reply rule that covers SMS, for example — the content you asked it to process goes to that endpoint, as described above. A backup file you create may include your text messages; it is encrypted on your device as described under <em>Backups</em>.</li>
+  <li><strong>SMS is not encrypted.</strong> Your carrier and the recipient's carrier can read every text message. Sennit cannot change that, and says so above the composer whenever a message will go out as SMS.</li>
+  <li>Choosing another default messaging app in Android's settings ends Sennit's access immediately.</li>
+</ul>
+<h2>What stays on your device</h2>
+<ul>
+  <li>Message history, search indexes and media caches, stored locally.</li>
+  <li>Encryption keys, held in the platform keystore/keychain.</li>
+  <li>Contact names, if you enable address-book matching. Matching happens entirely on the device; your address book is never uploaded.</li>
+  <li>Notifications are decrypted on the device.</li>
+</ul>
+<h2>Backups</h2>
+<p>Sennit can write your history to a single <code>.sennit</code> file. That file is <strong>created on your device, encrypted on your device, and never uploaded</strong>. There is no Sennit cloud to upload it to.</p>
+<ul>
+  <li>The file is encrypted with a passphrase you choose, using Argon2id and XChaCha20-Poly1305. The passphrase is not stored anywhere and is not recoverable — if you lose it, nobody can open the backup, including us.</li>
+  <li>Where the file goes is entirely your choice: the system save dialog on desktop, the share sheet on mobile. If you put it somewhere that syncs to a cloud drive, that is your decision and that provider's terms apply to the encrypted file.</li>
+  <li>A backup deliberately <strong>excludes your encryption keys, your sign-in token and your bridge credentials</strong>. Restoring history is not the same as signing in, and a file that could do both would be an account takeover in an attachment.</li>
+  <li>Restoring reads only the file you pick. Nothing is contacted, and nothing is written until you have seen what the file contains.</li>
+</ul>
+<h2>Permissions</h2>
+<p>Sennit asks for permissions only when a feature needs them: microphone for voice messages and calls, camera for photos and QR device verification, contacts for local name matching, location only when you explicitly share it into a chat (it is then stored like any other message on the server you use), notifications, and — on Android, only if you make Sennit your default messaging app — SMS. Denying a permission disables only the feature that wanted it.</p>
+<h2>Your rights</h2>
+<p>If you use our server, you can ask for access to your data, a copy of it, its correction or deletion, and you can object to its processing, at <strong><a href="mailto:eric@bostrot.com">eric@bostrot.com</a></strong>. You can also complain to a data protection authority, for example the one for North Rhine-Westphalia (LDI NRW). If you use another server, contact its operator; we hold nothing about you. Deleting the app removes its local data from your device.</p>
+<h2>Changes and contact</h2>
+<p>Changes to this policy are published here with the app's release notes. Questions: <strong><a href="mailto:eric@bostrot.com">eric@bostrot.com</a></strong>.</p>
+</main>
+</body>
+</html>
